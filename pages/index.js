@@ -4,6 +4,7 @@ import utilStyles from '../styles/utils.module.css';
 import { getSortedPostsData } from '../lib/posts';
 import Link from 'next/link';
 import Date from '../components/date';
+import PropTypes from 'prop-types';
 
 export async function getStaticProps() {
   const allPostsData = getSortedPostsData();
@@ -21,7 +22,7 @@ export default function Home({ allPostsData }) {
         <title>{siteTitle}</title>
       </Head>
       <section className={utilStyles.headingMd}>
-        <p>I'm Industrial Automation, I enjoy a good technical challenge. Love playing around Domotica</p>
+        <p>Im Industrial Automation, I enjoy a good technical challenge. Love playing around Domotica</p>
         <p>
           (This is a sample website - you’ll be building a site like this on{' '}
           <a href="https://nextjs.org/learn">our Next.js tutorial</a>.)
@@ -47,3 +48,6 @@ export default function Home({ allPostsData }) {
 //</Layout>
 //);
 //}
+Home.propTypes = {
+  allPostsData: PropTypes.any,
+};

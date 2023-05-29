@@ -3,6 +3,7 @@ import Image from 'next/image';
 import styles from './layout.module.css';
 import utilStyles from '../styles/utils.module.css';
 import Link from 'next/link';
+import PropTypes from 'prop-types';
 
 const name = 'Gabriel Valenzuela León';
 export const siteTitle = 'Next.js Sample Website';
@@ -67,3 +68,7 @@ export default function Layout({ children, home }) {
     </div>
   );
 }
+Layout.propTypes = {
+  children: PropTypes.any,
+  home: PropTypes.string,
+};

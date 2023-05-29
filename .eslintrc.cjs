@@ -5,6 +5,10 @@ module.exports = {
     'plugin:react/recommended',
     'plugin:react-hooks/recommended',
     'plugin:@next/next/recommended' ],
+  env: {
+
+    'node': true,
+  },
   rules: {
     'react/react-in-jsx-scope': 'off',
     // Indentation
