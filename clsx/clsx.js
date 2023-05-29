@@ -1,4 +1,5 @@
 import styles from './alert.module.css';
+import PropTypes from 'prop-types';
 import { clsx } from 'clsx';
 
 export default function Alert({ children, type }) {
@@ -13,3 +14,8 @@ export default function Alert({ children, type }) {
     </div>
   );
 }
+
+Alert.propTypes = {
+  children: PropTypes.any,
+  type: PropTypes.string,
+};
